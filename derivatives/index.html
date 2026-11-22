@@ -666,7 +666,7 @@ details.round > summary::-webkit-details-marker{display:none}
       <div class="q">\(y=4x^{5/2}\tan x\)</div>
       <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(\tfrac52-\tfrac22=\tfrac32\). And tan goes to sec².</div>
       <button class="reveal-btn" data-r>Full solution</button>
-      <div class="solbox hidden"><ol><li>\(f=4x^{5/2},\ f'=10x^{3/2}\)<br>\(g=\tan x,\ g'=\sec^2x\)</li><li>\(y'=10x^{3/2}\tan x+4x^{5/2}\sec^2x\)</li><li>Factored: \(2x^{3/2}(5\tan x+2x\sec^2x)\)</li></ol></div>
+      <div class="solbox hidden"><ol><li>\(f=4x^{5/2},\ f'=10x^{3/2}\)<br>\(g=\tan x,\ g'=\sec^2x\)</li><li>\(y'=10x^{3/2}\tan x+4x^{5/2}\sec^2x\)</li><li>Factored (both terms share \(2x^{3/2}\); \(x^{5/2}=x^{3/2}\cdot x\)): \(2x^{3/2}(5\tan x+2x\sec^2x)\)</li></ol></div>
       <label class="done"><input type="checkbox" data-track="p1"> Got it</label>
     </div>
 
@@ -675,7 +675,7 @@ details.round > summary::-webkit-details-marker{display:none}
       <div class="q">\(y=5x^3\csc x\)</div>
       <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">csc is a "co" function, so its derivative gets a minus.</div>
       <button class="reveal-btn" data-r>Full solution</button>
-      <div class="solbox hidden"><ol><li>\(f=5x^3,\ f'=15x^2\)<br>\(g=\csc x,\ g'=-\csc x\cot x\)</li><li>\(y'=15x^2\csc x-5x^3\csc x\cot x=5x^2\csc x(3-x\cot x)\)</li></ol></div>
+      <div class="solbox hidden"><ol><li>\(f=5x^3,\ f'=15x^2\)<br>\(g=\csc x,\ g'=-\csc x\cot x\)</li><li>\(y'=15x^2\csc x-5x^3\csc x\cot x\)</li><li>Factored (both terms share \(5x^2\csc x\)): \(5x^2\csc x(3-x\cot x)\)</li></ol></div>
       <label class="done"><input type="checkbox" data-track="p2"> Got it</label>
     </div>
 
@@ -1169,7 +1169,7 @@ details.round > summary::-webkit-details-marker{display:none}
 
     <div class="prob" style="--c:var(--blue);--t:var(--blue-t)"><div class="ph"><span class="pn">N7</span><span class="chip">Chain + Product</span></div><div class="q">\(y=x^3e^{2x}\)</div>
       <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Product rule first. \(g=e^{2x}\) needs the chain rule: \(g'=2e^{2x}\).</div>
-      <button class="reveal-btn" data-r>Full solution</button><div class="solbox hidden"><ol><li>\(3x^2e^{2x}+x^3\cdot2e^{2x}\)</li><li>\(y'=x^2e^{2x}(3+2x)\)</li></ol></div>
+      <button class="reveal-btn" data-r>Full solution</button><div class="solbox hidden"><ol><li>Product rule: \(3x^2e^{2x}+x^3\cdot2e^{2x}\)</li><li>Both terms share \(x^2e^{2x}\) (use the smaller power of x: \(x^3=x^2\cdot x\)).</li><li>Pull it out: \(3x^2e^{2x}\div x^2e^{2x}=3\) and \(2x^3e^{2x}\div x^2e^{2x}=2x\)</li><li>\(y'=x^2e^{2x}(3+2x)\) (line 1 is also a correct answer; factoring is the cleanup)</li></ol></div>
       <label class="done"><input type="checkbox" data-track="n7"> Got it</label></div>
 
     <div class="prob" style="--c:var(--green);--t:var(--green-t)"><div class="ph"><span class="pn">N8</span><span class="chip">Higher-order</span></div><div class="q">\(f(x)=3x^5-4x^3\). Find \(f'''(x)\).</div>
