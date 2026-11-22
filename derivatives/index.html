@@ -168,6 +168,15 @@ footer p{margin:0;font-weight:700;color:var(--blue)}
 footer small{display:block;color:var(--muted);font-weight:600}
 .wave{display:block;width:100%;height:60px}
 
+details.round{background:#fff;border-radius:18px;margin:0 0 14px;border:3px solid var(--c);overflow:hidden}
+details.round > summary{list-style:none;cursor:pointer;padding:16px;display:flex;align-items:center;gap:12px;background:var(--t)}
+details.round > summary::-webkit-details-marker{display:none}
+.rtitle{flex:1 1 0;min-width:0;font-weight:900;font-size:19px;color:var(--c);line-height:1.25}
+.rtitle small{display:block;font-weight:700;color:var(--muted);font-size:14px}
+.rcount{flex:0 0 auto;font-weight:900;background:var(--c);color:#fff;border-radius:999px;padding:4px 12px;font-size:14px}
+.rbody{padding:14px}
+.rbody .prob{border-left-color:var(--c)}
+.prob ol.steps{padding-left:0;margin:4px 0 10px}
 /* timer */
 .timer{position:fixed;right:14px;bottom:14px;z-index:30;background:#fff;border-radius:999px;box-shadow:0 4px 16px rgba(40,99,172,.25);display:flex;align-items:center;gap:6px;padding:6px 6px 6px 14px;border:2px solid var(--blue)}
 .timer .tt{font-weight:900;font-variant-numeric:tabular-nums;color:var(--blue);min-width:52px}
@@ -748,7 +757,7 @@ footer small{display:block;color:var(--muted);font-weight:600}
 <!-- NEXT TEST -->
 <section id="next">
   <h2>Next Test: Chain Rule, Higher-Order &amp; Implicit</h2>
-  <p class="lead">Three new skills for the test after the break. They all run on one idea: <b>peel from the outside in, and multiply as you go.</b> Learn the chain rule first, because the other two use it.</p>
+  <p class="lead">Three new skills for the test after the break. They all run on one idea: <b>peel from the outside in, and multiply as you go.</b> Learn the chain rule first, because the other two use it. Want more reps? Jump to the <a href="#rounds">Practice Rounds</a>.</p>
 
   <div class="plan">
     <table>
@@ -977,7 +986,7 @@ footer small{display:block;color:var(--muted);font-weight:600}
 
   <!-- CHAIN 7 VALUES -->
   <details class="mission" style="--c:var(--blue);--t:var(--blue-t)">
-    <summary><span class="mnum" style="font-size:15px">C7</span><span class="mtitle">\(h(x)=f(g(x))\). Find \(h'(2)\).<small>Chain rule with given numbers</small></span><span class="chip">Chain + Numbers</span><span class="chev">›</span></summary>
+    <summary><span class="mnum" style="font-size:15px">C7</span><span class="mtitle">\(h(x)=f(g(x))\). Find \(h'(2)\).<small>Given: \(g(2)=5\), \(g'(2)=3\), \(f'(5)=-4\), \(f'(2)=7\)</small></span><span class="chip">Chain + Numbers</span><span class="chev">›</span></summary>
     <div class="mbody">
       <div class="idea" style="font-size:17px"><b>The problem</b>\(g(2)=5\), \(g'(2)=3\), \(f'(5)=-4\), \(f'(2)=7\). Find \(h'(2)\).</div>
       <ol class="steps">
@@ -1189,6 +1198,565 @@ footer small{display:block;color:var(--muted);font-weight:600}
       <label class="done"><input type="checkbox" data-track="n12"> Got it</label></div>
   </div>
   <div class="score" id="nscore" style="background:var(--blue)">Next-Test score: 0 / 12. Get 10+ and you're ready.</div>
+
+  <h3 id="rounds" style="margin-top:30px;color:var(--blue)">Practice Rounds: 33 problems, step by step</h3>
+  <p class="lead">6 short rounds. Open ONE round, start the 12-minute timer, and go. Try each problem on paper, then tap <b>Hint</b> only if you're stuck for 2 minutes. Tap <b>Step-by-step</b> to check every step and its reason. Round 3 (double and triple chains) is the one that matters most.</p>
+
+  <details class="round" style="--c:var(--blue);--t:var(--blue-t)">
+    <summary><span class="rtitle">Round 1 · Spot the Layers<small>6 problems · ~8 min</small></span><span class="rcount">0/6</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>No derivatives yet. Just name the layers from OUTSIDE to INSIDE. Ask yourself: if I plugged in a number, what would I do LAST? That's the outside. The number of layers is the number of factors you'll multiply.</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">S1</span></div>
+          <div class="q">\((x^2+3)^7\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">What happens last: adding 3, or raising to the 7th?</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \((\ \ )^7\)</div><div class="why">Raising to the 7th happens last.</div></li>
+            <li><div class="step-do">Inside: \(x^2+3\)</div><div class="why">Under the power, you reach x after one step.</div></li>
+          </ol>
+          <div class="answer">2 layers → 2 factors</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">S2</span></div>
+          <div class="q">\(\sin(e^{x})\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Is there something other than plain x inside the sin?</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \(\sin(\ \ )\)</div><div class="why">sin is applied last.</div></li>
+            <li><div class="step-do">Inside: \(e^{x}\)</div><div class="why">\(e^x\) has plain x in its exponent, so you stop here.</div></li>
+          </ol>
+          <div class="answer">2 layers → 2 factors</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">S3</span></div>
+          <div class="q">\(\cos^4(2x)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Rewrite it as \([\cos(2x)]^4\) first.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \((\ \ )^4\)</div><div class="why">The power on a trig function is always the outside layer.</div></li>
+            <li><div class="step-do">Middle: \(\cos(\ \ )\)</div><div class="why">Under the power is the cos.</div></li>
+            <li><div class="step-do">Inside: \(2x\)</div><div class="why">Inside the cos.</div></li>
+          </ol>
+          <div class="answer">3 layers → 3 factors (triple chain)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">S4</span></div>
+          <div class="q">\(\sqrt{\sin(x^2)}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">The root covers everything, so it happens last.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \(\sqrt{\ \ }\)</div><div class="why">Taking the root happens last.</div></li>
+            <li><div class="step-do">Middle: \(\sin(\ \ )\)</div><div class="why">Under the root.</div></li>
+            <li><div class="step-do">Inside: \(x^2\)</div><div class="why">Inside the sin.</div></li>
+          </ol>
+          <div class="answer">3 layers → 3 factors (triple chain)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s4"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">S5</span></div>
+          <div class="q">\(e^{3x^2}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">The exponent is the inside.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \(e^{(\ \ )}\)</div><div class="why">e to a power is the outside.</div></li>
+            <li><div class="step-do">Inside: \(3x^2\)</div><div class="why">The exponent is the inside.</div></li>
+          </ol>
+          <div class="answer">2 layers → 2 factors</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s5"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">S6</span></div>
+          <div class="q">\(\tan^2(\sqrt x)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Rewrite it as \([\tan(\sqrt x)]^2\).</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Outside: \((\ \ )^2\)</div><div class="why">The square is applied last.</div></li>
+            <li><div class="step-do">Middle: \(\tan(\ \ )\)</div><div class="why">Under the square.</div></li>
+            <li><div class="step-do">Inside: \(\sqrt x\)</div><div class="why">Inside the tan.</div></li>
+          </ol>
+          <div class="answer">3 layers → 3 factors (triple chain)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r1-s6"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="round" style="--c:var(--blue);--t:var(--blue-t)">
+    <summary><span class="rtitle">Round 2 · Single Chain<small>5 problems · ~12 min</small></span><span class="rcount">0/5</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>Two layers each. Outside derivative (inside stays the same) × inside derivative.</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">A1</span></div>
+          <div class="q">\(y=(4x-7)^6\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Outside is the 6th power. Inside derivative is 4.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(6(4x-7)^5\)</div><div class="why">Power rule on the outside. The inside stays \(4x-7\).</div></li>
+            <li><div class="step-do">\(\times\,4\)</div><div class="why">Derivative of the inside, \(4x-7\).</div></li>
+            <li><div class="step-do">\(6\cdot4=24\)</div><div class="why">Multiply the numbers in front.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=24(4x-7)^5\)</div>
+          <div class="trap"><b>Trap</b>Don't expand the 6th power. Ever.</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r2-a1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">A2</span></div>
+          <div class="q">\(y=e^{x^2}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(e^u\) stays \(e^u\). Then times \(u'\).</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(e^{x^2}\)</div><div class="why">The derivative of \(e^u\) is \(e^u\), with the same exponent.</div></li>
+            <li><div class="step-do">\(\times\,2x\)</div><div class="why">Derivative of the exponent \(x^2\).</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=2x\,e^{x^2}\)</div>
+          <div class="trap"><b>Trap</b>The exponent does NOT drop down like a power rule. \(e^{x^2}\) is not \(x^2e^{x^2-1}\).</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r2-a2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">A3</span></div>
+          <div class="q">\(y=\sec(3x)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(\sec u\to\sec u\tan u\cdot u'\)</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(\sec(3x)\tan(3x)\)</div><div class="why">sec goes to sec·tan, and both keep the same inside.</div></li>
+            <li><div class="step-do">\(\times\,3\)</div><div class="why">Derivative of the inside, 3x.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=3\sec(3x)\tan(3x)\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r2-a3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">A4</span></div>
+          <div class="q">\(y=\sqrt{5-2x^3}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(\sqrt u\to\frac{1}{2\sqrt u}\cdot u'\)</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(\frac{1}{2\sqrt{5-2x^3}}\)</div><div class="why">Root rule. The original inside stays under the root.</div></li>
+            <li><div class="step-do">\(\times\,(-6x^2)\)</div><div class="why">Derivative of \(5-2x^3\). The 5 disappears.</div></li>
+            <li><div class="step-do">\(\frac{-6x^2}{2\sqrt{5-2x^3}}\)</div><div class="why">Multiply, then cancel the 6 with the 2.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{-3x^2}{\sqrt{5-2x^3}}\)</div>
+          <div class="trap"><b>Trap</b>Keep the minus from the \(-2x^3\).</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r2-a4"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">A5</span></div>
+          <div class="q">\(y=\frac{1}{(x^2+1)^3}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Rewrite with a negative exponent first. No quotient rule needed.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(y=(x^2+1)^{-3}\)</div><div class="why">Rewrite first (Fix E).</div></li>
+            <li><div class="step-do">\(-3(x^2+1)^{-4}\)</div><div class="why">Power rule: \(-3-1=-4\).</div></li>
+            <li><div class="step-do">\(\times\,2x\)</div><div class="why">Derivative of the inside.</div></li>
+            <li><div class="step-do">\(\frac{-6x}{(x^2+1)^4}\)</div><div class="why">Move the negative exponent to the bottom.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{-6x}{(x^2+1)^4}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r2-a5"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="round" style="--c:var(--red);--t:var(--red-t)">
+    <summary><span class="rtitle">Round 3 · Double & Triple Chains<small>7 problems · ~20 min</small></span><span class="rcount">0/7</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>This is the round that matters most. Draw a Layer Chart for EVERY problem: Layer · What it is · Derivative. Then multiply the derivative column. Count the layers, count the factors. They must match.</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">B1</span></div>
+          <div class="q">\(y=\sin^3 x\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\([\sin x]^3\). The inside is plain x, so its factor is just 1.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Cube layer: \(3\sin^2x\)</div><div class="why">Power rule. The sin x underneath stays the same.</div></li>
+            <li><div class="step-do">Sin layer: \(\cos x\)</div><div class="why">Inside is plain x, so you stop here (times 1).</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=3\sin^2x\cos x\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B2</span></div>
+          <div class="q">\(y=\cos^2(4x)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Square → cos → 4x. Three factors.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Square layer: \(2\cos(4x)\)</div><div class="why">Power rule.</div></li>
+            <li><div class="step-do">Cos layer: \(-\sin(4x)\)</div><div class="why">cos goes to −sin. Circle that minus.</div></li>
+            <li><div class="step-do">Inside layer: \(4\)</div><div class="why">Derivative of 4x.</div></li>
+            <li><div class="step-do">\(2\cdot(-1)\cdot4=-8\)</div><div class="why">Multiply the numbers in front.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=-8\sin(4x)\cos(4x)\)</div>
+          <div class="trap"><b>Trap</b>Missing the 4 means you stopped one layer early.</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B3</span></div>
+          <div class="q">\(y=(1+\sin(2x))^5\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">5th power → 1 + sin( ) → 2x.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Power layer: \(5(1+\sin(2x))^4\)</div><div class="why">Power rule. The whole inside stays the same.</div></li>
+            <li><div class="step-do">Middle layer: \(\cos(2x)\)</div><div class="why">The 1 disappears. sin goes to cos.</div></li>
+            <li><div class="step-do">Inside layer: \(2\)</div><div class="why">Derivative of 2x.</div></li>
+            <li><div class="step-do">\(5\cdot2=10\)</div><div class="why">Collect the numbers.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=10\cos(2x)(1+\sin(2x))^4\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B4</span></div>
+          <div class="q">\(y=\tan^2(3x^2)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Square → tan → 3x².</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Square layer: \(2\tan(3x^2)\)</div><div class="why">Power rule.</div></li>
+            <li><div class="step-do">Tan layer: \(\sec^2(3x^2)\)</div><div class="why">tan goes to sec², with the same inside.</div></li>
+            <li><div class="step-do">Inside layer: \(6x\)</div><div class="why">Derivative of \(3x^2\).</div></li>
+            <li><div class="step-do">\(2\cdot6x=12x\)</div><div class="why">Collect the parts in front.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=12x\tan(3x^2)\sec^2(3x^2)\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b4"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B5</span></div>
+          <div class="q">\(y=e^{\sin(5x)}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">e^( ) → sin( ) → 5x.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">e layer: \(e^{\sin(5x)}\)</div><div class="why">e^u stays e^u, with the exponent unchanged.</div></li>
+            <li><div class="step-do">Sin layer: \(\cos(5x)\)</div><div class="why">Derivative of the exponent's outside.</div></li>
+            <li><div class="step-do">Inside layer: \(5\)</div><div class="why">Derivative of 5x.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=5\cos(5x)\,e^{\sin(5x)}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b5"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B6</span></div>
+          <div class="q">\(y=\sqrt{\cos(x^3)}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Root → cos → x³.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Root layer: \(\frac{1}{2\sqrt{\cos(x^3)}}\)</div><div class="why">The original inside stays under the root.</div></li>
+            <li><div class="step-do">Cos layer: \(-\sin(x^3)\)</div><div class="why">cos goes to −sin.</div></li>
+            <li><div class="step-do">Inside layer: \(3x^2\)</div><div class="why">Derivative of \(x^3\).</div></li>
+            <li><div class="step-do">Multiply and put the top together over the bottom.</div><div class="why">Top: \(-\sin(x^3)\cdot3x^2\). Bottom: \(2\sqrt{\cos(x^3)}\).</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{-3x^2\sin(x^3)}{2\sqrt{\cos(x^3)}}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b6"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">B7</span></div>
+          <div class="q">\(y=\sin^4(e^{2x})\)  BOSS: four layers</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">4th power → sin → e^( ) → 2x. Four factors.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">Power layer: \(4\sin^3(e^{2x})\)</div><div class="why">Power rule.</div></li>
+            <li><div class="step-do">Sin layer: \(\cos(e^{2x})\)</div><div class="why">sin goes to cos.</div></li>
+            <li><div class="step-do">e layer: \(e^{2x}\)</div><div class="why">e^u stays e^u.</div></li>
+            <li><div class="step-do">Inside layer: \(2\)</div><div class="why">Derivative of 2x.</div></li>
+            <li><div class="step-do">\(4\cdot2=8\)</div><div class="why">Collect the numbers.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=8e^{2x}\sin^3(e^{2x})\cos(e^{2x})\)</div>
+          <div class="trap"><b>Trap</b>Four layers need four factors. Count them before you write the answer.</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r3-b7"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="round" style="--c:var(--green);--t:var(--green-t)">
+    <summary><span class="rtitle">Round 4 · Higher-Order<small>5 problems · ~12 min</small></span><span class="rcount">0/5</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>Take one derivative per line. Simplify each line before you take the next derivative.</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">D1</span></div>
+          <div class="q">\(y=x^4-2x^3+x\). Find \(y''\).</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Two derivatives, one per line.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(y'=4x^3-6x^2+1\)</div><div class="why">Power rule on each term.</div></li>
+            <li><div class="step-do">\(y''=12x^2-12x\)</div><div class="why">Differentiate y′. The 1 becomes 0.</div></li>
+          </ol>
+          <div class="answer mjx">\(y''=12x^2-12x\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r4-d1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">D2</span></div>
+          <div class="q">\(y=(2x+1)^5\). Find \(y''\).</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Use the chain rule each time. Every derivative brings out a 2.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(y'=5(2x+1)^4\cdot2=10(2x+1)^4\)</div><div class="why">Chain rule.</div></li>
+            <li><div class="step-do">\(y''=10\cdot4(2x+1)^3\cdot2\)</div><div class="why">Chain rule again on y′.</div></li>
+            <li><div class="step-do">\(=80(2x+1)^3\)</div><div class="why">10 · 4 · 2 = 80.</div></li>
+          </ol>
+          <div class="answer mjx">\(y''=80(2x+1)^3\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r4-d2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">D3</span></div>
+          <div class="q">\(y=\cos(3x)\). Find \(y''\) and \(y'''\).</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Each derivative pulls out another 3: 3, 9, 27.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(y'=-3\sin(3x)\)</div><div class="why">cos goes to −sin, times 3.</div></li>
+            <li><div class="step-do">\(y''=-9\cos(3x)\)</div><div class="why">sin goes to cos, times 3: −3 · 3 = −9.</div></li>
+            <li><div class="step-do">\(y'''=27\sin(3x)\)</div><div class="why">cos goes to −sin, times 3: −9 · (−1) · 3 = +27.</div></li>
+          </ol>
+          <div class="answer mjx">\(y''=-9\cos(3x)\qquad y'''=27\sin(3x)\)</div>
+          <div class="trap"><b>Trap</b>Track the sign at every step. It flips twice.</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r4-d3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">D4</span></div>
+          <div class="q">\(s(t)=2t^3-9t^2+12t\). When is velocity 0? What's the acceleration at the later time?</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">v = s′, a = v′. Set v = 0 and factor.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(v=6t^2-18t+12\)</div><div class="why">Velocity is the 1st derivative.</div></li>
+            <li><div class="step-do">\(6(t^2-3t+2)=6(t-1)(t-2)=0\)</div><div class="why">Factor out the 6, then factor the quadratic.</div></li>
+            <li><div class="step-do">\(t=1\) and \(t=2\)</div><div class="why">The object stops twice.</div></li>
+            <li><div class="step-do">\(a=12t-18\), so \(a(2)=6\)</div><div class="why">Acceleration is the derivative of velocity.</div></li>
+          </ol>
+          <div class="answer mjx">\(v=0\text{ at }t=1,\,2;\quad a(2)=6\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r4-d4"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">D5</span></div>
+          <div class="q">\(\frac{d^{50}}{dx^{50}}\cos x\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Cycle: cos → −sin → −cos → sin → cos. Divide by 4.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(50\div4=12\) remainder \(2\)</div><div class="why">48 derivatives bring you back to cos.</div></li>
+            <li><div class="step-do">2 steps from cos: −sin, then −cos</div><div class="why">Count two steps along the cycle.</div></li>
+          </ol>
+          <div class="answer mjx">\(-\cos x\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r4-d5"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="round" style="--c:var(--purple);--t:var(--purple-t)">
+    <summary><span class="rtitle">Round 5 · Implicit<small>6 problems · ~15 min</small></span><span class="rcount">0/6</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>4 steps every time: (1) differentiate both sides, tagging every y-term with y′. (2) y′ terms left, everything else right. (3) Factor out y′. (4) Divide.</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">E1</span></div>
+          <div class="q">\(x^2-y^2=9\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(y^2\to2y\,y'\)</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(2x-2y\,y'=0\)</div><div class="why">Tag the y-term. 9 becomes 0.</div></li>
+            <li><div class="step-do">\(-2y\,y'=-2x\)</div><div class="why">Move the 2x to the right.</div></li>
+            <li><div class="step-do">\(y'=\frac{x}{y}\)</div><div class="why">Divide by −2y. The negatives cancel.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{x}{y}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">E2</span></div>
+          <div class="q">\(xy=6\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">xy is a product. Use the product rule.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\((1)y+x\,y'=0\)</div><div class="why">Product rule: derivative of x is 1, derivative of y is y′.</div></li>
+            <li><div class="step-do">\(x\,y'=-y\)</div><div class="why">Move y to the right.</div></li>
+            <li><div class="step-do">\(y'=-\frac{y}{x}\)</div><div class="why">Divide by x.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=-\frac{y}{x}\)</div>
+          <div class="trap"><b>Trap</b>\(\frac{d}{dx}[xy]\) is NOT \(y'\). It's \(y+xy'\).</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">E3</span></div>
+          <div class="q">\(y^2+3xy=x^3\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">3xy needs the product rule.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(2y\,y'+3y+3x\,y'=3x^2\)</div><div class="why">Tag \(y^2\). Product rule on 3xy.</div></li>
+            <li><div class="step-do">\(2y\,y'+3x\,y'=3x^2-3y\)</div><div class="why">y′ terms stay left. Move 3y to the right.</div></li>
+            <li><div class="step-do">\(y'(2y+3x)=3x^2-3y\)</div><div class="why">Factor out y′.</div></li>
+            <li><div class="step-do">\(y'=\frac{3x^2-3y}{2y+3x}\)</div><div class="why">Divide.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{3x^2-3y}{2y+3x}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">E4</span></div>
+          <div class="q">\(\cos y+y=x^2\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">\(\cos y\to-\sin y\cdot y'\)</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(-\sin y\cdot y'+y'=2x\)</div><div class="why">Both y-terms get tagged.</div></li>
+            <li><div class="step-do">\(y'(1-\sin y)=2x\)</div><div class="why">Factor out y′. Put the 1 first, it reads cleaner.</div></li>
+            <li><div class="step-do">\(y'=\frac{2x}{1-\sin y}\)</div><div class="why">Divide.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{2x}{1-\sin y}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e4"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">E5</span></div>
+          <div class="q">Tangent to \(x^2+y^2=13\) at \((2,3)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Find y′, then plug in x = 2 AND y = 3.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(2x+2y\,y'=0\Rightarrow y'=-\frac{x}{y}\)</div><div class="why">Same steps as the circle in I1.</div></li>
+            <li><div class="step-do">At \((2,3)\): \(y'=-\frac23\)</div><div class="why">Plug in both coordinates.</div></li>
+            <li><div class="step-do">\(y-3=-\frac23(x-2)\)</div><div class="why">Point-slope form.</div></li>
+          </ol>
+          <div class="answer mjx">\(y-3=-\frac{2}{3}(x-2)\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e5"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">E6</span></div>
+          <div class="q">\(x^2+4y^2=4\). Find \(y''\).  BOSS</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Find y′ first. Then use the quotient rule on y′, and swap in y′ wherever it appears.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(2x+8y\,y'=0\Rightarrow y'=-\frac{x}{4y}\)</div><div class="why">Implicit, 4 steps.</div></li>
+            <li><div class="step-do">\(y''=-\frac{(1)(4y)-(x)(4y')}{16y^2}\)</div><div class="why">Quotient rule on x/(4y). The derivative of 4y is 4y′.</div></li>
+            <li><div class="step-do">Swap in \(y'=-\frac{x}{4y}\): \(4xy'=-\frac{x^2}{y}\)</div><div class="why">Replace y′ with what you already found.</div></li>
+            <li><div class="step-do">\(y''=-\frac{4y+\frac{x^2}{y}}{16y^2}=-\frac{4y^2+x^2}{16y^3}\)</div><div class="why">Multiply top and bottom by y.</div></li>
+            <li><div class="step-do">\(4y^2+x^2=4\), so \(y''=-\frac{4}{16y^3}\)</div><div class="why">Use the original equation.</div></li>
+          </ol>
+          <div class="answer mjx">\(y''=-\frac{1}{4y^3}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r5-e6"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="round" style="--c:var(--orange);--t:var(--orange-t)">
+    <summary><span class="rtitle">Round 6 · Mixed (test-style)<small>4 problems · ~12 min</small></span><span class="rcount">0/4</span><span class="chev">›</span></summary>
+    <div class="rbody">
+      <div class="idea"><b>How this round works</b>Like the real test: no labels telling you which rule to use. Step 1 is always to decide the BIG structure (product? quotient? chain?).</div>
+      <div class="pgrid">
+        <div class="prob">
+          <div class="ph"><span class="pn">M1</span></div>
+          <div class="q">\(y=x^2\cos(3x)\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Product rule first. The cos needs the chain rule.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(f=x^2,\ f'=2x\)</div><div class="why">Power rule.</div></li>
+            <li><div class="step-do">\(g=\cos(3x),\ g'=-3\sin(3x)\)</div><div class="why">Chain rule inside the box.</div></li>
+            <li><div class="step-do">\(f'g+fg'=2x\cos(3x)+x^2(-3\sin(3x))\)</div><div class="why">Product rule.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=2x\cos(3x)-3x^2\sin(3x)\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r6-m1"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">M2</span></div>
+          <div class="q">\(y=\frac{\sin(2x)}{x}\)</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Quotient rule. The top needs the chain rule.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(f=\sin(2x),\ f'=2\cos(2x)\)</div><div class="why">Chain rule.</div></li>
+            <li><div class="step-do">\(g=x,\ g'=1\)</div><div class="why">Easy one.</div></li>
+            <li><div class="step-do">\(\frac{f'g-fg'}{g^2}=\frac{2\cos(2x)\cdot x-\sin(2x)\cdot1}{x^2}\)</div><div class="why">Low d-High minus High d-Low.</div></li>
+          </ol>
+          <div class="answer mjx">\(y'=\frac{2x\cos(2x)-\sin(2x)}{x^2}\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r6-m2"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">M3</span></div>
+          <div class="q">\(g(3)=1,\ g'(3)=4,\ f'(1)=-2,\ f'(3)=5\). Find \((f\circ g)'(3)\).</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Find the inside value first. One number is a decoy.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\((f\circ g)'(3)=f'(g(3))\cdot g'(3)\)</div><div class="why">Rule with letters first.</div></li>
+            <li><div class="step-do">\(g(3)=1\), so you need \(f'(1)=-2\)</div><div class="why">\(f'(3)=5\) is the decoy.</div></li>
+            <li><div class="step-do">\((-2)(4)\)</div><div class="why">Multiply.</div></li>
+          </ol>
+          <div class="answer mjx">\(-8\)</div>
+          <div class="trap"><b>Trap</b>Using \(f'(3)\) gives 20. That's wrong.</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r6-m3"> Got it</label>
+        </div>
+        <div class="prob">
+          <div class="ph"><span class="pn">M4</span></div>
+          <div class="q">\(h(x)=[f(x)]^3\), \(f(2)=-1\), \(f'(2)=4\). Find \(h'(2)\).</div>
+          <button class="reveal-btn alt" data-r>Hint</button><div class="hintbox hidden">Chain rule with a power on the outside.</div>
+          <button class="reveal-btn" data-r>Step-by-step</button>
+          <div class="solbox hidden">
+          <ol class="steps">
+            <li><div class="step-do">\(h'(x)=3[f(x)]^2\cdot f'(x)\)</div><div class="why">Power rule on the outside, times the inside derivative.</div></li>
+            <li><div class="step-do">\(h'(2)=3(-1)^2\cdot4\)</div><div class="why">Plug in the given numbers.</div></li>
+            <li><div class="step-do">\(3\cdot1\cdot4\)</div><div class="why">\((-1)^2=+1\).</div></li>
+          </ol>
+          <div class="answer mjx">\(12\)</div>
+          </div>
+          <label class="done"><input type="checkbox" data-track="r6-m4"> Got it</label>
+        </div>
+      </div>
+    </div>
+  </details>
+
 </section>
 
 <!-- TEST DAY -->
@@ -1251,6 +1819,14 @@ footer small{display:block;color:var(--muted);font-weight:600}
     });
   });
 
+  // One round open at a time
+  var rs = document.querySelectorAll('details.round');
+  rs.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (d.open) rs.forEach(function(o){ if (o !== d) o.open = false; });
+    });
+  });
+
   // One mission open at a time
   var ms = document.querySelectorAll('details.mission');
   ms.forEach(function(d){
@@ -1284,6 +1860,11 @@ footer small{display:block;color:var(--muted);font-weight:600}
     var pct = Math.round(done / boxes.length * 100);
     document.getElementById('pfill').style.width = pct + '%';
     document.getElementById('plbl').textContent = done + ' of ' + boxes.length + ' done' + (done === boxes.length ? ' · You crushed it!' : '');
+    document.querySelectorAll('details.round').forEach(function(r){
+      var bs = r.querySelectorAll('[data-track]'), k = 0;
+      bs.forEach(function(b){ if (b.checked) k++; });
+      var rc = r.querySelector('.rcount'); if (rc) rc.textContent = (k === bs.length ? '✓ ' : '') + k + '/' + bs.length;
+    });
     var ns = document.getElementById('nscore');
     if (ns) ns.textContent = 'Next-Test score: ' + n + ' / 12. ' + (n >= 10 ? "You're ready!" : "Get 10+ and you're ready.");
     document.getElementById('pscore').textContent = 'Practice score: ' + p + ' / 10. ' + (p >= 8 ? "You're test-ready!" : 'Get 8+ and you\'re test-ready.');
